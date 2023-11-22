@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <div class="flex justify-center mb-10 bg-sky-500 p-10">
+            <input id="searchText" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+            <button id="searchBtn" class="btn btn-primary" onclick="search()">Search</button>
+        </div>
+    </header>
+    <main>
+        <section id="spinner" class="text-center hidden">
+            <span class="loading loading-spinner loading-lg text-blue-500 "></span>
+        </section>
+        <section>
+            <div id="container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto items-center">
+                
+            </div>
+        </section>
+        <section class="text-center mt-4">
+            <button id="showAllBtn" class="btn btn-primary hidden" onclick="viewMore()">ShowALL</button>
+        </section>
+        <section class="modal">
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="mobile_details" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box text-center mx-auto">  
+                    <div class="modal-action ">
+                        <form method="dialog">
+                            <button class="btn" onclick="modal.close()">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+    </main>
+    <script src="js/phone_hunter.js"></script>
+</body>
+
+</html>
